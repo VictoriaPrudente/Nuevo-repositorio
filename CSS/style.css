@@ -5,7 +5,162 @@
 
 /*ANIMACIONES*/
 
+@keyframes tarjeta {
+    0% {
+        transform-origin: 0 0;
+        transform: perspective(800px) rotateY(-180deg);
+        
+    }
+    100% {
+        transform-origin: 0 0;
+        transform: perspective(800px) rotateY(0deg);
+    }
+    }
 
+@keyframes der_izq {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    
+    60% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+    
+    80% {
+        transform: translateX(10px);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes izq_a_der {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    
+    60% {
+        opacity: 1;
+        transform: translateX(30px);
+    }
+    
+    80% {
+        transform: translateX(-10px);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes para_arriba {
+    0%{opacity: 0;
+        transform: translateY(2000px);
+    }
+    
+    
+    50%{
+        transform: translateY(-30);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+}
+
+@keyframes para_abajo {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+
+    
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes barrita {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(255, 0, 0, 0.432); }
+}
+
+@keyframes blur {
+    100% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: scale(1, 1);
+        filter: blur(0px);
+    }
+    0% {
+        opacity: 0;
+        transform-origin: 50% 50%;
+        transform: scale(2, 2);
+        filter: blur(20px);
+    }
+}
 
 
 body {
