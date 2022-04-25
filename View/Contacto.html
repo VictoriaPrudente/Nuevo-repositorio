@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Multimedia/logo.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d7aad8375a.js" crossorigin="anonymous"></script>
+    <title>Contacto - Final Eyewear Project</title>
+</head>
+
+<body class="gcont_index">
+    <header class="encabezado" id="h_todos">
+        
+        <div class="logo">
+            <a href="./Index.html"><img class="icono" src="../Multimedia/logo.png" alt="TfeP" width="50" height="50"></a>
+            <p class="nombreProyecto">THE FINAL EYEWEAR PROJECT</p>
+        </div>
+    
+        <!-- searchbox
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <a href="##" class="icon">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>-->
+        
+        
+        <nav class="headerMenu">
+            <ul class="listaNav">
+                <li>    
+                    <a class="glitch_menu" href="../Index.html">Inicio</a>
+                </li>  
+                <li>
+                    <a class="glitch_menu" href="./Tienda.html">Tienda ▼</a>
+                    <ul class="transition_subnav">
+                        <li><a class="submenu" href=".Tienda.html/#todo">Todos los modelos  </a></li>
+                        <li><a class="submenu" href=".Tienda.html/#tendencias">Tendencias  </a></li>
+                        <li><a class="submenu" href=".Tienda.html/#nuevos">Nuevos modelos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="glitch_menu" href="./Proyecto.html">Proyecto</a>
+                </li>
+                <Li>
+                    <a class="glitch_menu" href="./Sucursales.html">Sucursales</a>
+                </Li>
+                <Li>
+                    <a class="glitch_menu" id="contacto" href="./Contacto.html">Contacto</a>
+                </Li>
+            </ul>
+        </nav>
+        </header>
+
+    <main contenido_main>
+        
+        <section>
+            <div class="contenedorContacto" >
+                
+                <!--Formulario-->
+                <form class="formulario" action="#">
+                    <h1>¡Escríbenos!</h1>
+                    <label for="nombre"><b>N O M B R E :</b></label>
+                    <input class="input" type="text" name="nombre" placeholder="Escriba su nombre">
+                
+                    <label for="apellido"><b>A P E L L I D O:</b></label>
+                    <input class="input" type="text" name="apellido" placeholder="Escriba su apellido">
+
+                    <label for="email"><b>E M A I L:</b></label>
+                    <input class="input" type="email" name="email" placeholder="Ejemplo@gmail.com">
+
+                    
+                    <div class="sexo">
+                    <label for="sexo"><b>S E X O:</b></label>
+                        
+                            <input type="radio" name="sexo" value="femenino">
+                            <label for="sexo">Femenino</label>
+                        
+                        
+                            <input type="radio" name="sexo" value="masculino">
+                            <label for="sexo">Masculino</label>
+                        </div>   
+                    
+
+                    <select class="input" name="Estado civil">
+                        <option value="Seleccionar">-Seleccionar-</option>
+                        <option value="Soltero/a">Soltero/a</option>
+                        <option value="Casado/a">Casado/a</option>
+                    </select>
+
+                    <div class="newsletter">
+                        <label for="newsletter">¿Desea recibir el Newsletter?</label>
+                        <input type="checkbox" name="newsletter" value="aceptar" >
+                    </div>
+                    
+                    <textarea name="comentario" cols="70" rows="5" placeholder="Comentario"></textarea>
+                
+                    <div class="botones">
+                        <input type="submit" value="Enviar formulario">
+                        <input type="reset" value="Limpiar formulario">
+                    </div>
+            </form>
+
+                <div class="imgContacto">
+                    <!--img-->
+                    <img src="../Multimedia/de0d127b5419170395ff12519c4ca491.jpg" width="100%">
+                </div >
+            </div>
+        </section>
+
+    </main>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,192L360,128L720,224L1080,160L1440,192L1440,320L1080,320L720,320L360,320L0,320Z"></path></svg>
+    <!--footer-->
+    <footer>
+        <div class="footer_fila_1">
+            <div class="fooDiv1">
+                <h6>Contacto</h6>
+                <p>+549 11 1234 5678</p>
+                <p>info@finaleyewearproject.com</p>
+                <p>260 Howard Ave, NY</p>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer_fila_2"><p>Copyright - 2022. Todos los derechos reservados.</p></div>
+    </footer>
+
+</body>
+</html>
