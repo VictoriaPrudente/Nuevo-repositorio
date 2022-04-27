@@ -163,20 +163,9 @@
 }
 
 
-body {
-    font-family: 'Manrope', sans-serif;
-    font-size: 2rem;
-    background: #ffffff;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 /*Header*/
-
-header{
-    animation: para_abajo 1s;
-}
 
 
 
@@ -186,6 +175,7 @@ header{
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: para_abajo 1s;
 }
 
 
@@ -195,6 +185,7 @@ header{
     align-content: center;
     justify-content: center;
     padding: 1.5rem;
+    padding-bottom: 0rem;
 }
 
 .logo a{
@@ -278,36 +269,41 @@ input{
     position: static;
     justify-content: center;
     animation: blur 2s 0s;
+    
+}
+
+.headerMenu:not(.not){
+    box-shadow: 1px 3px #08080844 ;
 }
 
 
 .listaNav {
     list-style: none;
     letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    
 }
 
 .listaNav li {
     position: relative;
-    font-size: 1.4rem;
+    
     display: inline-block;
     padding:0rem 1.5rem;
     transition:1s;
 }
-
 /*estilo*/
 
 .glitch_menu{
     cursor: pointer;
+    font-size: 1.1rem;
 }
 
 .headerMenu ul li a{
     color: #000000 ;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
     text-shadow: -0.02em 0 0 #F22613,  0.02em 0 0 #00FFFF;
     text-decoration: none;
-    letter-spacing: 0.5rem;
     font-weight: lighter;
     padding-bottom: 10px;
 }
@@ -349,12 +345,13 @@ ul ul {
 ul ul li {
     position: relative;
     display: none;
-   
+    padding: 0rem;
+
 }
 
 .headerMenu ul ul li a{
     font-size: 0.8rem ;
-    padding: 1rem 0rem;
+    padding: 0rem 1rem;
     letter-spacing: 0rem;
     text-align: center;
 }
@@ -373,14 +370,15 @@ ul li:hover ul {
     z-index: 1;
     padding: 1rem;
     border-radius: 2rem;
-    width:90%;
     right:0px;
-    top: 40px;
+    top: 38px;
     right: 0.1rem;
 }
 
 .headerMenu ul ul li a:hover{
     color: #5baca1;
+    background-color: rgba(255, 255, 255, 0.685); ;
+    border-radius: 2rem;
 }
 
 
@@ -389,13 +387,13 @@ ul li:hover ul {
 /*Inicio*/
 #inicio{
     color: #5baca1;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 #hombre {
     display: flex;
     align-items: flex-end;
-    height: 85%;
+    height: 80%;
     
 }
 
@@ -414,14 +412,19 @@ ul li:hover ul {
 
 #hombre div h1{
     letter-spacing: 5px;
-    
+    margin: 0%;
+    padding: 0%;
 }
 
-.btn {
+#hombre p{
+    margin: 0%;
+}
+
+.botn {
     min-width: 130px;
     height: 40px;
     color: rgb(62, 145, 156);
-    padding: 5px 10px;
+    padding: 1px 5px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -432,14 +435,15 @@ ul li:hover ul {
     border: none;
     background: #05090c;
     box-shadow: 0 5px #212529;
+    font-size: 1rem;
 }
 
-.btn:hover {
+.botn:hover {
     box-shadow: 0 3px #212529;
     top: 1px;
 }
 
-.btn:active {
+.botn:active {
     box-shadow: 0 0 #212529;
     top: 5px;
 }
@@ -448,33 +452,34 @@ ul li:hover ul {
 .contenedorBloques{
     display: flex;
     justify-content: space-around;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 500ms;
     margin: 10rem 0rem ;
 }
 
 .bloqueBeneficio {
     color: rgba(255, 255, 255, 0.685);
-    padding: 2rem;
+    padding: 3rem;
     margin: 0rem;
     font-weight: bold;
     transition: all 0.3s ease;
     background-size: 120% auto;
     letter-spacing: 0.2rem;
     cursor:default;
-    background: #05090c;
+    background: linear-gradient(to bottom right, #16344bd0, #05090c44);
     backdrop-filter: blur( 7px );
     -webkit-backdrop-filter: blur( 7px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width: 14rem;
-    height: 14rem;
+    width: 17rem;
+    height: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     animation: blur 2s;
+    transition: 1s;
 }
 
 .bloqueBeneficio h2{
@@ -483,17 +488,22 @@ ul li:hover ul {
 }
 
 .bloqueBeneficio:hover {
-    background-position: right center;
     box-shadow: rgba(0, 0, 0, 0.266) 5px 5px 10px 5px;
     transform: scale(1.1);
+    background: linear-gradient(to bottom right, #05090c44, #16344bd0);
 }
-.BloqueBeneficio:active {
-    top: 2px;
-}
+
 
 .bloqueBeneficio ul{
     list-style: none;
+    padding: 0rem;
 }
+
+
+
+
+
+
 
 /*Tarjeta SALE*/
 
@@ -508,7 +518,7 @@ ul li:hover ul {
     "foto fotos"
     "foto btn";
     padding: 3rem;
-    
+    margin-top: 10rem ;
     justify-content: center;
     background: linear-gradient( #1a777a8a 5%, #102227 100% )
 }
@@ -756,6 +766,10 @@ ul li:hover ul {
         width: 100%;
     }
 
+    .footer_fila_2 p{
+        margin: 0%;
+    }
+
     .redes{
         font-size: 4rem;
         text-decoration: none;
@@ -791,7 +805,7 @@ ul li:hover ul {
 
 #tienda{
     color: #5baca1;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 #h_todos{
@@ -800,7 +814,9 @@ ul li:hover ul {
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: para_abajo 1s;
 }
+
 
 .grid_tienda {
     display: grid;
@@ -810,8 +826,6 @@ ul li:hover ul {
     grid-template-areas: 
     "modelos modelos"
     "filtro galeria";
-    background: rgb(170,190,227);
-    background: radial-gradient(circle, rgba(170,190,227,1) 55%, rgba(0,0,0,1) 100%);
 }
 
 
@@ -832,40 +846,26 @@ ul li:hover ul {
     grid-template-rows: auto 1fr;
     grid-gap: 0.5rem;
     grid-template-areas: 
-    "modelos modelos"
+    "modelos galeria"
     "filtro galeria";
     
-    height: 80rem;
+    height: 150rem;
 }
 
 /*APARTADO*/
 .modelosSect{
-    
     background-size: cover;
-    display: flex; 
-    justify-content:flex-end;
     align-items: center;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 15rem;
+    font-size: 1rem;
+    width: 0 auto;
     grid-area: modelos;
 }
 
 .textModelo{
     font-family: 'Orbitron', sans-serif;
-    letter-spacing: 1rem;
+    letter-spacing: 0.2rem;
     color: rgb(0, 0, 0);
-    text-shadow:
-    0 0 5px rgb(0, 0, 0),
-    0 0 10px rgb(0, 0, 0),
-    0 0 20px rgb(0, 0, 0),
-    0 0 40px rgba(0, 255, 255, 0.788),
-    0 0 80px rgba(0, 255, 255, 0.719),
-    0 0 90px rgba(0, 255, 255, 0.664),
-    0 0 100px rgba(0, 255, 255, 0.685),
-    0 0 150px rgba(0, 255, 255, 0.705);
-    padding-right: 5rem;
-    text-align: end;
+    padding-bottom: 1rem;
 }
 
 
@@ -874,13 +874,10 @@ ul li:hover ul {
 .filtro{
     background-color: #ffffff;
     margin: 0%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: auto;
     width: 16.6rem;
     padding: 1rem ;
-    box-shadow: #0000008f 5px 5px 5px 5px; 
+    border-right: solid 0.1rem #0000004d;
     grid-area: filtro;
 }
 
@@ -891,6 +888,7 @@ ul li:hover ul {
 .nav_tienda ul {
     list-style: none;
     position: static;
+    padding-left: 0%;
 }
 
 .nav_tienda ul li {
@@ -898,7 +896,6 @@ ul li:hover ul {
     font-size: 1.3rem;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
 }
 
 .nav_tienda ul li a {
@@ -911,37 +908,16 @@ ul li:hover ul {
     animation: underline 1s infinite;
 }
 
-.nav_tienda ul ol{
-    padding: 1.5rem;
-    padding: 0.5rem;
-}
-.formulario_tienda form{
-    position: relative;
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+label{
+    display: unset !important;
 }
 
-.formulario_tienda form h4{
-    font-size: 1rem;
-    padding: 1rem;
-}
 
-.pago{
-    padding: 1rem 0rem 1rem 0rem;
-}
-.pago label{
-    padding-left: 1rem;
-}
-
-.formulario_tienda form label{
-    font-size: 1rem;
-}
 
 /*Galería*/
 .galeria{
     grid-area: galeria;
+    
 }
 .galeriaTienda{
     display: flex;
@@ -950,6 +926,7 @@ ul li:hover ul {
     margin-left: 2%;
     background-color: #ffffff;
     padding-bottom: 4rem; 
+    
 }
 
 #galeriaTienda1{
@@ -971,7 +948,7 @@ ul li:hover ul {
     /*Color de menú actual*/
     #contacto{
         color: #5baca1;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
 /*Main*/
@@ -1003,7 +980,7 @@ ul li:hover ul {
 .contenedorContacto h1{
     font-family: 'Righteous', cursive;
     letter-spacing: 0.1rem;
-    font-size: 4.6rem;
+    font-size: 3rem;
     margin: 0rem;
     text-align: center;
     color: #05090c;
@@ -1013,6 +990,7 @@ ul li:hover ul {
 label{
     font-size: small ;
     padding: 1rem;
+    display: unset;
 }
 
     .sexo{
@@ -1026,7 +1004,7 @@ label{
     .input{
         padding: 2%; padding-bottom: 1%;
         border: solid rgba(4, 57, 65, 0.911);
-        box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.61);
+        box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.192);
         text-align: center;
     }
     
@@ -1037,7 +1015,7 @@ label{
     textarea{
         padding: 2%; padding-bottom: 1%;
         border: solid rgba(4, 57, 65, 0.911);
-        box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.61);
+        box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.192);
         text-align: center;
     }
 
@@ -1067,7 +1045,7 @@ label{
     /*Color de menú actual*/
     #proyecto{
         color: #5baca1;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
 
@@ -1082,7 +1060,7 @@ label{
     /*Color de menú actual*/
     #sucursales{
         color: #5baca1;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     /*Main*/
@@ -1126,8 +1104,9 @@ label{
 
 
     #h_index {
-        height: 50rem;
-        background-size: cover;
+        height: 40rem;
+        
+
     }
     
  
@@ -1171,7 +1150,7 @@ label{
     
 
 #hombre {
-    height: 50%;
+    height: 30%;
 }
 
     #hombre div {
@@ -1180,6 +1159,9 @@ label{
 
     #hombre div h1{
     font-size: 1rem;
+    }
+    #hombre div p{
+        font-size: 1rem;
     }
     
 
@@ -1198,14 +1180,18 @@ label{
         font-size: 1rem;
         margin: 3rem 0rem ;
     }
+
+    .bloqueBeneficio h2{
+        font-size: 1rem;
+    }
     
     .bloqueBeneficio {
         
-        padding: 2rem;
-        margin: 0rem;
+        padding: 1rem;
+        margin: 1rem 0rem;
         font-size: 0.5rem;
-        width: 7rem;
-        height: 7rem;
+        width: 10rem;
+        height: 10rem;
         
         
     }
@@ -1214,6 +1200,7 @@ label{
         display: flex;
         flex-direction: column ;
         padding: 2rem;
+        margin: 1rem;
     }
     
 
@@ -1262,9 +1249,12 @@ label{
     }
 
 footer{
-    height: 16rem;
+    height: 25rem;
 }
 
+svg{
+    position: relative; top: 1rem;
+}
 .footer_fila_1{
     padding: 5rem 1rem 1rem 1rem;
 }
@@ -1294,7 +1284,7 @@ footer{
 
 
     #h_todos{
-        height: 56vh;
+        height: 52vh;
     }
 
     .banner{
@@ -1305,15 +1295,13 @@ footer{
     .grid_tienda {
         display: flex;
         flex-direction: column;
-        background: rgb(170,190,227);
-        background: radial-gradient(circle, rgba(170,190,227,1) 55%, rgba(0,0,0,1) 100%);
+        height: 195rem;
     }
     
     .textModelo{
         padding: 1rem;
         text-align: center;
         font-size: 0.8rem;
-        background-color: #b6d4d3;
     }
 
 
@@ -1322,7 +1310,7 @@ footer{
         overflow: scroll;
         height: auto;
         width: auto;
-       display: unset;
+        display: unset;
     }
 
     .filtro ul{
@@ -1381,10 +1369,10 @@ footer{
     
     .galeriaTienda img{
         background-color: #00000013;
-        width: 6rem;
-        height: 6rem;
+        width:9rem;
+        height: 9rem;
     }
-}
+
 
     .contenedorContacto{
         flex-direction: column;
@@ -1423,3 +1411,4 @@ footer{
         font-size: 2rem;
         padding: 2rem 0rem ;
     }
+}
