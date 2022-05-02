@@ -175,7 +175,7 @@
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: para_abajo 1s;
+    animation: para_abajo .5s;
 }
 
 
@@ -190,6 +190,7 @@
 
 .logo a{
     padding-top: 0.4rem;
+    margin-right: 1rem ;
 }
 .header img {
     transition: all 500ms; 
@@ -268,7 +269,7 @@ input{
     align-items: center;
     position: static;
     justify-content: center;
-    animation: blur 2s 0s;
+    animation: blur .5s 0s;
     
 }
 
@@ -289,7 +290,7 @@ input{
     
     display: inline-block;
     padding:0rem 1.5rem;
-    transition:1s;
+    transition:.4s;
 }
 /*estilo*/
 
@@ -371,7 +372,7 @@ ul li:hover ul {
     padding: 1rem;
     border-radius: 2rem;
     right:0px;
-    top: 38px;
+    top: 25px;
     right: 0.1rem;
 }
 
@@ -398,26 +399,27 @@ ul li:hover ul {
 }
 
 #hombre div {
-    color: #080a0c;
-    margin: 0rem 0rem 6rem 6rem;  
-    font-size: 2rem;
+    margin: 0rem 100rem 6rem 6rem;  
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     align-items: stretch; 
-    transition: 1s;
-    animation: izq_a_der 2s ease-in;
+    transition: .5s;
+    animation: izq_a_der .5s ease-in;
 }
 
 
 
 #hombre div h1{
+    color: #202c2d;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
     letter-spacing: 5px;
     margin: 0%;
     padding: 0%;
 }
 
 #hombre p{
-    margin: 0%;
+    margin: 1rem 0rem;
 }
 
 .botn {
@@ -478,19 +480,19 @@ ul li:hover ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation: blur 2s;
+    animation: blur 1s;
     transition: 1s;
 }
 
 .bloqueBeneficio h2{
-    color: #000000;
-    text-shadow: -0.04em 0 0 #F22613,  0.04em 0 0 #00FFFF;
+    color: #00000098;
+    text-shadow: -0.04em 0 0 #f2261393,  0.04em 0 0 #00FFFF;
 }
 
 .bloqueBeneficio:hover {
     box-shadow: rgba(0, 0, 0, 0.266) 5px 5px 10px 5px;
     transform: scale(1.1);
-    background: linear-gradient(to bottom right, #05090c44, #16344bd0);
+    background: linear-gradient(to bottom right, #05090c44, #16344b98);
 }
 
 
@@ -499,10 +501,9 @@ ul li:hover ul {
     padding: 0rem;
 }
 
-
-
-
-
+.bloqueBeneficio p{
+    margin: 0rem;
+}
 
 
 /*Tarjeta SALE*/
@@ -537,20 +538,20 @@ ul li:hover ul {
     margin: 0rem;
     color: #05090c;
     text-shadow: -0.04em 0 0 #F22613,  0.04em 0 0 #00FFFF;
-    animation: para_arriba 3s;
+    animation: para_arriba 1s;
 }
 .foto-1{
     grid-area: foto;
     background-image: url(../Multimedia/grid.jpg);
     margin: 0rem 2rem;
-    animation: para_arriba 3s;
+    animation: para_arriba 1s;
 }
 .foto-2{
     grid-area: fotos;
     background-image: url(../Multimedia/grid2.jpg);
     margin: 0rem 2rem;
     background-size: cover;
-    animation: para_abajo 3s;
+    animation: para_abajo 1s;
 }
 .boton{
     grid-area: btn;
@@ -562,7 +563,7 @@ ul li:hover ul {
     letter-spacing: 0.1rem;
     font-family: 'Righteous', cursive;
     letter-spacing: 0.1rem;
-    animation: para_abajo 3s;
+    animation: para_abajo 1s;
 }
 
 .button-glitch,
@@ -659,7 +660,7 @@ ul li:hover ul {
         justify-content: space-evenly;
         padding: 0% 0%;
         margin-top: 3rem;
-        animation: der_izq 2s;
+        animation: der_izq 1s;
     }
     .contenedorProyecto{
         color: rgb(255, 255, 255);
@@ -692,7 +693,6 @@ ul li:hover ul {
         background-color: #ffffff;
         color: rgb(0, 0, 0);
     }
-
 
     
 
@@ -740,6 +740,7 @@ ul li:hover ul {
         color: rgb(0, 0, 0);
         background-color: #273036;
         margin: 0rem;
+        padding: 0rem 2rem;
     }
 
 .footer_fila_1{
@@ -748,16 +749,10 @@ ul li:hover ul {
     background-color: #273036;
     display: flex;
     justify-content: space-between;
-    padding: 5rem;
-    font-size: 1.5rem;
-}
-
-.footer_fila_1 p{
     padding: 1rem;
 }
-
 .footer_fila_1 h6{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
     .footer_fila_2{
@@ -771,10 +766,9 @@ ul li:hover ul {
     }
 
     .redes{
-        font-size: 4rem;
+        font-size: 2rem;
         text-decoration: none;
         align-self: center;
-        
     }
 
     .redes a{
@@ -782,18 +776,15 @@ ul li:hover ul {
         flex-direction: column;
         text-decoration: none;
         align-items: center;
+        padding: 1rem;
         color: #000000;
-        padding: 2rem;
     }
+
 
     svg{
         margin: 0%;
-        position: relative; top: 2rem;
+        position: relative; top: 1rem;
     }
-    
-
-
-
 
 
 
@@ -964,7 +955,7 @@ label{
     border-radius: 1%;
     border: solid rgba(8, 33, 56, 0.342);
     box-shadow: 5px 5px 5px 5px #210c9756;
-    animation: tarjeta 1s;
+    animation: tarjeta .5s;
 }
 
 .formulario{
@@ -1066,7 +1057,7 @@ label{
     /*Main*/
 
         .tarjetaSuc {
-            animation: tarjeta 1s;
+            animation: tarjeta .5s;
             background: linear-gradient( #357077 50%, #102227 100% );
             color: #ffffff;
             padding: 3% 3% 3% 3%;
@@ -1150,7 +1141,7 @@ label{
     
 
 #hombre {
-    height: 30%;
+    height: 39%;
 }
 
     #hombre div {
@@ -1162,6 +1153,7 @@ label{
     }
     #hombre div p{
         font-size: 1rem;
+        width: 20rem;
     }
     
 
@@ -1178,7 +1170,7 @@ label{
     .contenedorBloques{
         flex-wrap: wrap;
         font-size: 1rem;
-        margin: 3rem 0rem ;
+        margin: 3rem 2rem ;
     }
 
     .bloqueBeneficio h2{
@@ -1195,14 +1187,12 @@ label{
         
         
     }
-  
     .sale {
         display: flex;
         flex-direction: column ;
         padding: 2rem;
         margin: 1rem;
     }
-    
 
     
     .texto{
@@ -1210,8 +1200,17 @@ label{
         text-align: center;
     }
     .texto h1{
-        font-size: 4rem;
+        font-size: 2rem;
         margin: 1rem;
+    }
+
+
+    
+    .button-glitch{
+        font-size: 0.7rem;
+        width: 120px;
+        height: 30px;
+        line-height: 0%;
     }
 
     .boton{
@@ -1250,6 +1249,7 @@ label{
 
 footer{
     height: 25rem;
+    padding: 0%;
 }
 
 svg{
@@ -1284,7 +1284,7 @@ svg{
 
 
     #h_todos{
-        height: 52vh;
+        height: 39vh;
     }
 
     .banner{
