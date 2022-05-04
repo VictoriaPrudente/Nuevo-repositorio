@@ -1,0 +1,52 @@
+@import "../Variables/_variables.scss";
+@import "../Animaciones/_animaciones.scss";
+
+footer{
+    position: static;
+    color:rgba(240, 248, 255, 0.829);
+    background-color: #273036;
+    margin: 0rem;
+    padding: 0rem 2rem;
+}
+
+.footer_fila_1{
+    font-size: 1rem;
+    padding-left: 2rem;
+    background-color: #273036;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    h6{
+        font-size: 2rem;
+    }
+}
+
+
+.footer_fila_2{
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    p{
+        margin: 0%;
+        color: rgba(240, 248, 255, 0.829);
+    }
+}
+
+.redes{
+    font-size: 2rem;
+    text-decoration: none;
+    align-self: center;
+    a{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        align-items: center;
+        padding: 1rem;
+        color:rgba(240, 248, 255, 0.829);
+    }
+}
+
+svg{
+    margin: 0%;
+    position: relative; top: 1rem;
+}

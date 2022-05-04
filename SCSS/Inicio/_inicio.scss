@@ -1,0 +1,286 @@
+@import "../Variables/_variables.scss";
+@import "../Animaciones/_animaciones.scss";
+
+#inicio{
+    color: $colorHover;
+    font-size: 1.4rem;
+}
+
+#hombre {
+    display: flex;
+    align-items: flex-end;
+    height: 80%;
+    div{
+        margin: 0rem 100rem 6rem 6rem;  
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; 
+        transition: .5s;
+        animation: izq_a_der .5s ease-in;
+        h1{
+            color: #202c2d;
+            text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+            letter-spacing: 5px;
+            margin: 0%;
+            padding: 0%;
+        }
+    }
+    p{
+        margin: 1rem 0rem;
+    }
+    
+}
+
+.botn {
+    min-width: 130px;
+    height: 40px;
+    color: rgb(62, 145, 156);
+    padding: 1px 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #05090c;
+    box-shadow: 0 5px #212529;
+    font-size: 1rem;
+    &:hover{
+        box-shadow: 0 3px #212529;
+        top: 1px;
+    }
+    &:active{
+        box-shadow: 0 0 #212529;
+        top: 5px;
+    }
+}
+
+.contenedorBloques{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    transition: all 500ms;
+    margin: 10rem 0rem ;
+}
+
+.bloqueBeneficio {
+    color: rgba(255, 255, 255, 0.685);
+    padding: 3rem;
+    margin: 0rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-size: 120% auto;
+    letter-spacing: 0.2rem;
+    cursor:default;
+    background: linear-gradient(to bottom right, #16344bd0, #05090c44);
+    backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 17rem;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: blur 1s;
+    transition: 1s;
+    h2{
+        color: #000000;
+        text-shadow: $textshadow;
+    }
+    ul{
+        list-style: none;
+        padding: 0rem;
+    }
+    p{
+        margin: 0rem;
+    }
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.266) 5px 5px 10px 5px;
+        transform: scale(1.1);
+        background: linear-gradient(to bottom right, #05090c44, #16344b98);
+    }
+}
+
+
+.sale {
+    display: grid;
+    grid-template-columns: 550px 550px;
+    grid-template-rows: auto 500px auto ;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas: 
+    "text fotos"
+    "foto fotos"
+    "foto btn";
+    padding: 3rem;
+    margin-top: 10rem ;
+    justify-content: center;
+    background: linear-gradient( #1a777a8a 5%, #102227 100% )
+}
+
+.texto{
+    grid-area: text;
+    margin: 0.5rem 2rem;
+    padding: 0rem;
+    border-bottom: solid #05090c;
+    h1{
+        font-family: 'Righteous', cursive;
+        letter-spacing: 0.1rem;
+        font-size: 4.6rem;
+        margin: 0rem;
+        color: #05090c;
+        text-shadow:$textshadow;
+        animation: para_arriba 1s;
+    }
+}
+
+
+.foto-1{
+    grid-area: foto;
+    background-image: url(../Multimedia/grid.jpg);
+    margin: 0rem 2rem;
+    animation: para_arriba 1s;
+}
+
+.foto-2{
+    grid-area: fotos;
+    background-image: url(../Multimedia/grid2.jpg);
+    margin: 0rem 2rem;
+    background-size: cover;
+    animation: para_abajo 1s;
+}
+
+.boton{
+    grid-area: btn;
+    font-size: 1.5rem;
+    font-family: 'Righteous', cursive;
+    padding: 1rem 1rem;
+    border-top: solid #05090c;
+    margin: 0.5rem 2rem ;
+    letter-spacing: 0.1rem;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 0.1rem;
+    animation: para_abajo 1s;
+}
+
+.button-glitch,
+.button-glitch:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #05090c 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #2699a1;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    
+}
+
+.button-glitch:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #000fe2 5%);
+    text-shadow: $textshadow;
+    clip-path: var(--slice-0);
+}
+
+.button-glitch:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+#text {
+    color: rgba(15, 14, 14, 0.781);
+    text-align: center;
+    padding: 5rem 5rem 5rem 5rem; 
+    margin: 5rem 0rem;
+    background-size: cover;
+    h2{
+        font-size: 4.5rem;
+        overflow: hidden; 
+        border-right: .15em solid rgb(23, 148, 197); 
+        white-space: nowrap;
+        margin: 0 auto; 
+        letter-spacing: .15em; 
+        animation: 
+        typing 3.5s steps(40, end),
+        barrita .75s step-end infinite;
+        }
+    p{
+        font-size: 2rem;
+        line-height: 2.2rem;
+        font-weight: 200;
+        position: relative;
+        padding-top: 50px;
+    }
+}
+
+    .conoceProyecto{
+        background: linear-gradient( rgb(0, 0, 0) 50%, rgb(204, 208, 209) 50%);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0% 0%;
+        margin-top: 3rem;
+        animation: der_izq 1s;
+    }
+    .contenedorProyecto{
+        color: rgb(255, 255, 255);
+        text-align: justify;
+        font-size: 2rem;
+        padding: 5rem;
+        h4{
+            color: #1e5357;
+            letter-spacing: 0.4rem;
+        }
+    }
+
+
+    .btn_proyecto{
+        border: none;
+        display: inline-block;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.822);
+        color: #ffffff;
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem;
+        width: 10rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 2rem; margin-left: 0rem;
+        &:hover{
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+    }
+    
+
+    
+
+
