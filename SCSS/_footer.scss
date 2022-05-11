@@ -1,5 +1,6 @@
-@import "../Variables/_variables.scss";
-@import "../Animaciones/_animaciones.scss";
+@import "_variables.scss";
+@import "_animaciones.scss";
+@import "./mixin";
 
 footer{
     position: static;
@@ -13,8 +14,7 @@ footer{
     font-size: 1rem;
     padding-left: 2rem;
     background-color: #273036;
-    display: flex;
-    justify-content: space-between;
+    @include flexBox(flex,row,space-between,center);
     padding: 1rem;
     h6{
         font-size: 2rem;
@@ -37,10 +37,8 @@ footer{
     text-decoration: none;
     align-self: center;
     a{
-        display: flex;
-        flex-direction: column;
+        @include flexBox (flex,column,center,center);
         text-decoration: none;
-        align-items: center;
         padding: 1rem;
         color:rgba(240, 248, 255, 0.829);
     }

@@ -1,0 +1,14 @@
+@mixin flexBox ($flex,$f_direction,$justify,$align) {
+    display: $flex;
+    flex-direction: $f_direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grilla ($grid,$column,$row,$r_gap,$c_gap){
+    display: $grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row ;
+    grid-column-gap: $c_gap;
+    grid-row-gap: $r_gap;
+}

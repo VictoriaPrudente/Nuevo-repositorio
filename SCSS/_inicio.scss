@@ -1,5 +1,7 @@
-@import "../Variables/_variables.scss";
-@import "../Animaciones/_animaciones.scss";
+
+@import "./animaciones";
+@import "./variables";
+@import "./mixin";
 
 #inicio{
     color: $colorHover;
@@ -7,15 +9,12 @@
 }
 
 #hombre {
-    display: flex;
-    align-items: flex-end;
+    @include flexBox (flex,row,unset,flex-end);
     height: 80%;
     div{
         margin: 0rem 100rem 6rem 6rem;  
         font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch; 
+        @include flexBox (flex,column,unset,stretch);
         transition: .5s;
         animation: izq_a_der .5s ease-in;
         h1{
@@ -33,58 +32,57 @@
 }
 
 .botn {
-    min-width: 130px;
-    height: 40px;
-    color: rgb(62, 145, 156);
-    padding: 1px 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background: #05090c;
-    box-shadow: 0 5px #212529;
-    font-size: 1rem;
-    &:hover{
-        box-shadow: 0 3px #212529;
-        top: 1px;
-    }
-    &:active{
-        box-shadow: 0 0 #212529;
-        top: 5px;
-    }
+
+        border: none;
+        display: inline-block;
+        border-radius: 50px;
+        background-color: rgba(0, 0, 0, 0.822);
+        color: #ffffffc0;
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem;
+        width: 10rem;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        margin: 1rem; margin-left: 0rem;
+        letter-spacing: 1px;
+        box-shadow: 0 5px #212529;
+        outline: none;
+        &:hover{
+            background-color: #ffffff5d;
+            color: rgb(0, 0, 0);
+            box-shadow: 0 3px #212529;
+            top: 1px;
+        }
+        &:active{
+            box-shadow: 0 0 #212529;
+            top: 5px;
+        }
 }
 
 .contenedorBloques{
-    display: flex;
-    justify-content: space-around;
+    @include flexBox (flex,row,space-around,unset);
     font-size: 1rem;
     transition: all 500ms;
     margin: 10rem 0rem ;
 }
 
 .bloqueBeneficio {
-    color: rgba(255, 255, 255, 0.685);
-    padding: 3rem;
-    margin: 0rem;
+    color: rgba(255, 255, 255, 0.685) ;
+    padding: map-get($tarjeta, espaciado);
+    margin: map-get($tarjeta, margen);
     font-weight: bold;
     transition: all 0.3s ease;
-    background-size: 120% auto;
+    background-size: map-get($tarjeta, backgroundtamaño);
     letter-spacing: 0.2rem;
-    cursor:default;
-    background: linear-gradient(to bottom right, #16344bd0, #05090c44);
-    backdrop-filter: blur( 7px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width: 17rem;
-    height: 17rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    cursor:map-get($tarjeta, cursorr);
+    background: map-get($tarjeta, fondo);
+    backdrop-filter: map-get($tarjeta, filtro);
+    border-radius: map-get($tarjeta, radio);
+    border: map-get($tarjeta, borde);
+    width: map-get($tarjeta, ancho);
+    height: map-get($tarjeta, alto);
+    @include flexBox (flex,column,center,center);
     text-align: center;
     animation: blur 1s;
     transition: 1s;
@@ -108,11 +106,7 @@
 
 
 .sale {
-    display: grid;
-    grid-template-columns: 550px 550px;
-    grid-template-rows: auto 500px auto ;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    @include grilla (grid,550px 550px,auto 500px auto,0px,0px);
     grid-template-areas: 
     "text fotos"
     "foto fotos"
@@ -124,6 +118,8 @@
 }
 
 .texto{
+    grid-row: 1;
+    grid-column: 1;
     grid-area: text;
     margin: 0.5rem 2rem;
     padding: 0rem;
@@ -242,9 +238,7 @@
     .conoceProyecto{
         background: linear-gradient( rgb(0, 0, 0) 50%, rgb(204, 208, 209) 50%);
         background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        @include flexBox (flex,row,space-evenly,center);
         padding: 0% 0%;
         margin-top: 3rem;
         animation: der_izq 1s;
@@ -262,22 +256,7 @@
 
 
     .btn_proyecto{
-        border: none;
-        display: inline-block;
-        border-radius: 50px;
-        background-color: rgba(0, 0, 0, 0.822);
-        color: #ffffff;
-        text-align: center;
-        font-size: 1rem;
-        padding: 1rem;
-        width: 10rem;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 2rem; margin-left: 0rem;
-        &:hover{
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
-        }
+        @extend .botn;
     }
     
 

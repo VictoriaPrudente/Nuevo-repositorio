@@ -1,0 +1,108 @@
+
+@import "./animaciones";
+@import "./variables";
+@import "./mixin";
+
+#tienda{
+    color: #5baca1;
+    font-size: 1.4rem;
+}
+
+#h_todos{
+    background-color: #ffffff;
+    height: 26vh;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: para_abajo 1s;
+}
+
+.banner{
+    width: 100%;
+    margin-bottom: 5rem;
+    animation: izq_a_der 1s;
+}
+
+.grid_tienda {
+    @include grilla (grid,auto 1fr,auto 1fr,.5rem,.5rem);
+    grid-template-areas: 
+    "modelos galeria"
+    "filtro galeria";
+    height: 150rem;
+}
+
+.modelosSect{
+    background-size: cover;
+    align-items: center;
+    font-size: 1rem;
+    width: 0 auto;
+    grid-area: modelos;
+}
+
+.textModelo{
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.2rem;
+    color: rgb(0, 0, 0);
+    padding-bottom: 1rem;
+}
+
+.filtro{
+    background-color: #ffffff;
+    margin: 0%;
+    height: auto;
+    width: 16.6rem;
+    padding: 1rem ;
+    border-right: solid 0.1rem #0000004d;
+    grid-area: filtro;
+}
+
+.nav_tienda {
+    position: relative;
+    ul{
+        list-style: none;
+        position: static;
+        padding-left: 0%;
+        li{
+            position: relative;
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            a{
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                &:hover{
+                        text-decoration: underline;
+                        animation: underline 1s infinite;
+                }
+            }
+        }
+    }
+}
+
+label{
+    display: unset !important;
+}
+
+.galeria{
+    grid-area: galeria;
+    
+}
+.galeriaTienda{
+    @include flexBox (flex,row,center,center);
+    margin-left: 2%;
+    background-color: #ffffff;
+    padding-bottom: 4rem; 
+    img{
+        padding: 0.5rem;
+        margin: 1rem;
+        background-color: #ffffff;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: #0000005e 5px 5px 5px 5px;
+        }
+    }
+}
+
+#galeriaTienda1{
+    padding-top: 4rem;
+}
