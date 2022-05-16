@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -898,7 +899,11 @@ svg {
 }
 
 #hombre div {
-  margin: 0rem 100rem 6rem 6rem;
+  background-color: #00000000;
+  margin: 5rem;
+  padding: 3rem;
+  width: 22rem;
+  height: unset;
   font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -917,14 +922,16 @@ svg {
   transition: .5s;
   -webkit-animation: izq_a_der .5s ease-in;
           animation: izq_a_der .5s ease-in;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50px;
+  -webkit-box-shadow: #0000002f 5px 5px 5px 5px;
+          box-shadow: #0000002f 5px 5px 5px 5px;
 }
 
 #hombre div h1 {
   color: #202c2d;
-  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
-  letter-spacing: 5px;
-  margin: 0%;
-  padding: 0%;
+  text-shadow: #00E6F6 1px;
 }
 
 #hombre p {
@@ -932,21 +939,19 @@ svg {
 }
 
 .botn, .btn_proyecto {
+  margin: unset;
+  padding: 0.5rem;
+  width: 7rem;
+  height: unset;
   border: none;
-  display: inline-block;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.822);
   color: #ffffffc0;
   text-align: center;
-  font-size: 1rem;
-  padding: 1rem;
-  width: 10rem;
+  font-size: 0.8rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   cursor: pointer;
-  margin: 1rem;
-  margin-left: 0rem;
-  letter-spacing: 1px;
   -webkit-box-shadow: 0 5px #212529;
           box-shadow: 0 5px #212529;
   outline: none;
@@ -985,24 +990,11 @@ svg {
   margin: 10rem 0rem;
 }
 
-.bloqueBeneficio {
-  color: rgba(255, 255, 255, 0.685);
-  padding: 3rem;
+.bloques, .bloques1 {
   margin: 0rem;
-  font-weight: bold;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-size: 120% auto;
-  letter-spacing: 0.2rem;
-  cursor: default;
-  background: -webkit-gradient(linear, left top, right bottom, from(#16344bd0), to(#05090c44));
-  background: linear-gradient(to bottom right, #16344bd0, #05090c44);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 17rem;
-  height: 17rem;
+  padding: 0rem 7rem;
+  width: 27rem;
+  height: unset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1010,40 +1002,40 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: rgba(0, 0, 0, 0.685);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: default;
   text-align: center;
-  -webkit-animation: blur 1s;
-          animation: blur 1s;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
-.bloqueBeneficio h2 {
+.bloques h2, .bloques1 h2 {
   color: #000000;
   text-shadow: -0.02em 0 0 #F22613, 0.02em 0 0 #00FFFF;
 }
 
-.bloqueBeneficio ul {
+.bloques ul, .bloques1 ul {
   list-style: none;
   padding: 0rem;
 }
 
-.bloqueBeneficio p {
+.bloques p, .bloques1 p {
   margin: 0rem;
 }
 
-.bloqueBeneficio:hover {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.266) 5px 5px 10px 5px;
-          box-shadow: rgba(0, 0, 0, 0.266) 5px 5px 10px 5px;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  background: -webkit-gradient(linear, left top, right bottom, from(#05090c44), to(#16344b98));
-  background: linear-gradient(to bottom right, #05090c44, #16344b98);
+.bloques img, .bloques1 img {
+  padding: 3rem;
+}
+
+.bloques1 {
+  border-left: solid 2px rgba(0, 0, 0, 0.493);
+  border-right: solid 2px rgba(0, 0, 0, 0.493);
 }
 
 .sale {
@@ -1078,7 +1070,7 @@ svg {
   border-bottom: solid #05090c;
 }
 
-.texto h1 {
+.texto h2 {
   font-family: 'Righteous', cursive;
   letter-spacing: 0.1rem;
   font-size: 4.6rem;
@@ -1121,8 +1113,6 @@ svg {
   padding: 1rem 1rem;
   border-top: solid #05090c;
   margin: 0.5rem 2rem;
-  letter-spacing: 0.1rem;
-  font-family: 'Righteous', cursive;
   letter-spacing: 0.1rem;
   -webkit-animation: para_abajo 1s;
           animation: para_abajo 1s;
@@ -1440,6 +1430,18 @@ svg {
   }
 }
 
+.contenedorMenu {
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.contenedorMenu:hover {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.808);
+  position: relative;
+}
+
 #h_index {
   background-image: url("../Multimedia/background81.jpg");
   height: 100vh;
@@ -1521,6 +1523,7 @@ svg {
 }
 
 .headerMenu ul {
+  z-index: 1;
   list-style: none;
   letter-spacing: 0.1rem;
   padding: 0.5rem;
@@ -1532,16 +1535,18 @@ svg {
   padding: 0rem 1.5rem;
   -webkit-transition: .4s;
   transition: .4s;
+  list-style: none;
 }
 
 .headerMenu ul li a {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: -0.02em 0 0 #F22613, 0.02em 0 0 #00FFFF;
   text-decoration: none;
   font-weight: lighter;
   padding-bottom: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .headerMenu ul li a:hover {
@@ -1561,16 +1566,16 @@ svg {
   transition: .5s;
 }
 
-.headerMenu ul li:hover {
+.headerMenu ul li:hover:not(.submenu) {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.headerMenu ul li:hover ul {
-  z-index: 1;
+.headerMenu ul li:hover:not(.submenu) ul {
+  z-index: -1;
   position: absolute;
   display: block;
-  background: rgba(255, 255, 255, 0.25);
+  background: white;
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.171);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.171);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -1586,6 +1591,8 @@ svg {
 .dropdownn {
   position: relative;
   display: none;
+  -webkit-transition: top .3s;
+  transition: top .3s;
 }
 
 .dropdownn li {
@@ -1601,9 +1608,6 @@ svg {
 
 .dropdownn li a:hover {
   color: #5baca1;
-  background-color: rgba(255, 255, 255, 0.685);
-  border-radius: 2rem;
-  padding: 0.5rem;
 }
 
 .dropdownn li:hover {
@@ -1623,6 +1627,21 @@ svg {
   transition: .5s;
   -webkit-transition-delay: .2s;
           transition-delay: .2s;
+}
+
+/*menú responsive*/
+.checkbtn {
+  display: none !important;
+  font-size: 30px;
+  color: #000000;
+  float: right;
+  line-height: 820px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
 }
 
 @keyframes tarjeta {
@@ -1831,7 +1850,6 @@ svg {
 
 #h_todos {
   background-color: #ffffff;
-  height: 26vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2176,8 +2194,91 @@ label {
 }
 
 iframe {
-  width: 90.8rem;
-  height: 42rem;
+  width: 100%;
+  height: 30rem;
+  margin-top: 3rem;
+}
+
+.proyectoEquipo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proyectoEquipo h2 {
+  padding: 3rem;
+}
+
+.contTitulo {
+  background-color: rgba(0, 255, 21, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+}
+
+.bloqueEquipo {
+  background-color: rgba(255, 255, 255, 0.384);
+  padding: 0.1rem;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  margin: 1rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: #05090ca1 1px 5px 10px 2px;
+          box-shadow: #05090ca1 1px 5px 10px 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloqueEquipo img {
+  margin: 1.2rem;
+  border-radius: 100%;
+  border: solid #102227b2 1px;
+}
+
+.bloqueEquipo p {
+  text-align: center;
+  margin: 2rem;
+}
+
+.bloqueEquipo h3 {
+  width: 10rem;
+  text-align: center;
 }
 
 /*Sucursales*/
@@ -2186,7 +2287,7 @@ iframe {
   font-size: 1.4rem;
 }
 
-.tarjetaSuc, .contenedorContacto {
+.tarjetaSuc, .proyectoEquipo, .contenedorContacto {
   -webkit-animation: tarjeta .5s;
           animation: tarjeta .5s;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #357077), to(#102227));
@@ -2200,7 +2301,7 @@ iframe {
           box-shadow: 5px 5px 5px 5px #210c9756;
 }
 
-.tarjetaSuc .h1, .contenedorContacto .h1, .tarjetaSuc .contenedorContacto h1, .contenedorContacto .tarjetaSuc h1, .contenedorContacto h1 {
+.tarjetaSuc .h1, .proyectoEquipo .h1, .contenedorContacto .h1, .tarjetaSuc .proyectoEquipo h2, .proyectoEquipo .tarjetaSuc h2, .proyectoEquipo h2, .tarjetaSuc .contenedorContacto h1, .contenedorContacto .tarjetaSuc h1, .contenedorContacto h1 {
   font-family: 'Righteous', cursive;
   letter-spacing: 0.1rem;
   font-size: 3rem;
@@ -2210,7 +2311,7 @@ iframe {
   text-shadow: -0.04em 0 0 #F22613,  0.04em 0 0 #00FFFF;
 }
 
-.tarjetaSuc p, .contenedorContacto p {
+.tarjetaSuc p, .proyectoEquipo p, .contenedorContacto p {
   color: #05090c;
   text-align: center;
   padding: 1%;
@@ -2325,10 +2426,37 @@ textarea {
 }
 
 @media (max-width: 412px) {
+  .checkbtn {
+    display: block !important;
+    color: #000000;
+    float: right;
+    line-height: 0px;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .headerMenu {
+    -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
+  }
+  .contenedorMenu {
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0rem 1rem 0rem 0rem;
+    z-index: 1;
+  }
   #h_index {
-    height: 40rem;
+    height: 42rem;
   }
   .listaNav {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2336,24 +2464,23 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: static;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    top: 105px;
+    left: -100%;
+    -webkit-transition: all .5s;
+    transition: all .5s;
     text-align: center;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
   }
   .listaNav li {
-    padding: 0.5rem;
+    margin: 50px 0;
+    line-height: 0px;
   }
   .listaNav li a {
+    font-size: 20px;
     text-decoration: none;
-    font-size: 0.9rem;
+    background: none;
   }
   .listaNav li:hover ul {
     display: none;
@@ -2371,28 +2498,25 @@ textarea {
     display: none;
   }
   #hombre {
-    height: 39%;
+    height: 80%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #hombre div {
-    margin: 0rem 0rem 0rem 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 2rem;
+    width: 16rem;
+    margin: 0%;
   }
   #hombre div h1 {
     font-size: 1rem;
+    margin: 0%;
   }
   #hombre div p {
     font-size: 1rem;
-    width: 20rem;
-  }
-  .bloqueBeneficio {
-    margin: 1rem;
-    padding: 1rem;
-    margin: 1rem 0rem;
-    font-size: 0.5rem;
-    width: 10rem;
-    height: 10rem;
-  }
-  .bloqueBeneficio h2 {
-    font-size: 1rem;
+    width: 15rem;
   }
   button {
     margin: 0 auto;
@@ -2401,8 +2525,19 @@ textarea {
   .contenedorBloques {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    font-size: 0.8rem;
+    margin: 20%;
+  }
+  .bloques, .bloques1 {
+    border: unset;
+    padding: 1rem;
+  }
+  .bloques h2, .bloques1 h2 {
     font-size: 1rem;
-    margin: 3rem 2rem;
+  }
+  .bloques img, .bloques1 img {
+    padding: 1rem;
+    width: 4rem;
   }
   .sale {
     display: -webkit-box;
@@ -2412,14 +2547,20 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
     padding: 2rem;
-    margin: 1rem;
+    margin: 0rem;
   }
   .texto {
     margin: 0.5rem 2rem;
     text-align: center;
   }
-  .texto h1 {
+  .texto h2 {
     font-size: 2rem;
     margin: 1rem;
   }
@@ -2431,7 +2572,10 @@ textarea {
   }
   .boton {
     font-size: 1rem;
-    margin: 0.5rem 2rem;
+    margin: 0rem 3.9rem;
+  }
+  .boton h2 {
+    text-align: center;
   }
   #text {
     padding: 2rem;
@@ -2459,12 +2603,16 @@ textarea {
   .conoceProyecto img {
     width: 100%;
   }
+  .contenedorProyecto {
+    padding: 4rem 3rem;
+    text-align: start;
+    background-color: #000;
+  }
   .btn_proyecto {
     background-color: rgba(255, 255, 255, 0.822);
     color: #000000;
   }
   footer {
-    height: 25rem;
     padding: 0%;
   }
   svg {
@@ -2492,7 +2640,7 @@ textarea {
     padding: 0.3rem;
   }
   #h_todos {
-    height: 39vh;
+    height: 16vh;
   }
   .banner {
     width: 100%;
@@ -2506,7 +2654,7 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 195rem;
+    height: 200rem;
   }
   .textModelo {
     padding: 1rem;
@@ -2514,7 +2662,6 @@ textarea {
     font-size: 0.8rem;
   }
   .filtro {
-    overflow: scroll;
     height: auto;
     width: auto;
     display: unset;
@@ -2560,12 +2707,11 @@ textarea {
     margin: 0%;
     background-color: #ffffff;
     padding: 0rem;
-    width: auto;
   }
   .galeriaTienda img {
     background-color: #00000013;
-    width: 9rem;
-    height: 9rem;
+    width: 8rem;
+    height: 8rem;
   }
   #galeriaTienda1 {
     padding: 0rem;
@@ -2579,7 +2725,6 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
     padding: 3% 3% 3% 3%;
-    margin: 1%;
     width: 90%;
   }
   .contenedorContacto h1 {
@@ -2594,6 +2739,15 @@ textarea {
   .botones {
     margin: 5% 3%;
   }
+  .contTitulo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .proyectoEquipo h2 {
+    padding: 1.5rem;
+  }
   iframe {
     width: 100%;
     height: 30rem;
@@ -2604,7 +2758,7 @@ textarea {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .tarjetaSuc h1, .contenedorContacto h1 {
+  .tarjetaSuc h1, .proyectoEquipo h1, .contenedorContacto h1 {
     font-size: 2rem;
     padding: 2rem 0rem;
   }

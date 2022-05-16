@@ -14,23 +14,55 @@
 
 
 @media (max-width: 412px){
+    .checkbtn{
+        display: block !important;
+        color: #000000;
+        float: right;
+        line-height: 0px;
+        margin-right: 0px;
+        cursor: pointer;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .headerMenu{
+        box-shadow: unset !important;
+    }
+
+    .contenedorMenu{
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 1rem 0rem 0rem;
+        z-index: 1;
+    }
+
     #h_index {
-        height: 40rem;
+        height: 42rem;
     }
 
     .listaNav {
+        position: fixed;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: static;
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        top: 105px;
+        left: -100%;
+        transition: all .5s;
         text-align: center;
-        height: max-content;
+        
         li {
-            padding: 0.5rem;
+            margin: 50px 0;
+            line-height: 0px;
+            
             a{
+                font-size: 20px;
                 text-decoration: none;
-                font-size: 0.9rem;
+                background: none;
             }
             &:hover{
                 ul{
@@ -53,28 +85,21 @@
     }
 
     #hombre {
-        height: 39%;
+        height: 80%;
+        justify-content: center;
         div{
-            margin: 0rem 0rem 0rem 1rem;  
+            position: sticky;
+            padding: 2rem;
+            width: 16rem; 
+            margin: 0%;
             h1{
                 font-size: 1rem;
+                margin: 0%;
             }
             p{
                 font-size: 1rem;
-                width: 20rem;
+                width: 15rem;
             }
-        }
-    }
-
-    .bloqueBeneficio {
-        margin: 1rem;
-        padding: 1rem;
-        margin: 1rem 0rem;
-        font-size: 0.5rem;
-        width: 10rem;
-        height: 10rem;
-        h2{
-            font-size: 1rem;
         }
     }
 
@@ -85,24 +110,40 @@
 
     .contenedorBloques{
         flex-wrap: wrap;
-        font-size: 1rem;
-        margin: 3rem 2rem ;
+        font-size: 0.8rem;
+        margin: 20%;
     }
 
+    .bloques{
+    
+        border: unset;
+        padding: 1rem;
+        h2{
+            font-size: 1rem;
+        }
+        img{
+            padding: 1rem;
+            width: 4rem;
+        }
+    }
+
+
+
     .sale {
-        display: flex;
-        flex-direction: column ;
+        @include flexBox (flex,column,unset,unset);
         padding: 2rem;
-        margin: 1rem;
+        margin: 0rem;
     }
 
     .texto{
         margin: 0.5rem 2rem;
         text-align: center;
-        h1{
+        h2{
             font-size: 2rem;
             margin: 1rem;
+            
         }
+        
     }
     
     .button-glitch{
@@ -114,7 +155,10 @@
 
     .boton{
         font-size: 1rem;
-        margin: 0.5rem 2rem ;
+        margin: 0rem 3.9rem ;
+        h2{
+            text-align: center;
+        }
     }
     
     #text {
@@ -138,6 +182,11 @@
             width: 100%;
         }
     }
+    .contenedorProyecto{
+        padding: 4rem 3rem;
+        text-align: start;
+        background-color: #000;
+    }
     
     .btn_proyecto{
         background-color: rgba(255, 255, 255, 0.822);
@@ -145,7 +194,6 @@
     }
 
     footer{
-        height: 25rem;
         padding: 0%;
     }
 
@@ -176,7 +224,7 @@
     }
 
     #h_todos{
-        height: 39vh;
+        height: 16vh;
     }
 
     .banner{
@@ -187,7 +235,7 @@
     .grid_tienda {
         display: flex;
         flex-direction: column;
-        height: 195rem;
+        height: 200rem;
     }
     
     .textModelo{
@@ -197,7 +245,6 @@
     }
 
     .filtro{
-        overflow: scroll;
         height: auto;
         width: auto;
         display: unset;
@@ -253,11 +300,10 @@
         margin: 0%;
         background-color: #ffffff;
         padding: 0rem; 
-        width: auto;
         img{
             background-color: #00000013;
-            width:9rem;
-            height: 9rem;
+            width:8rem;
+            height: 8rem;
         }
     }
 
@@ -269,7 +315,6 @@
         flex-direction: column;
         align-items: center;
         padding: 3% 3% 3% 3%;
-        margin: 1%;
         width: 90%;
         h1{
             font-size:2rem;
@@ -287,6 +332,15 @@
         margin: 5% 3%;
     }   
 
+    .contTitulo{
+        flex-direction: column;
+    }
+
+    .proyectoEquipo{
+        h2{
+            padding: 1.5rem;
+        }
+    }
     iframe{
         width: 100%;
         height: 30rem;
@@ -301,4 +355,5 @@
         font-size: 2rem;
         padding: 2rem 0rem ;
     }
+
 }

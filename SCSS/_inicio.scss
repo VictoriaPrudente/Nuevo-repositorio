@@ -12,17 +12,18 @@
     @include flexBox (flex,row,unset,flex-end);
     height: 80%;
     div{
-        margin: 0rem 100rem 6rem 6rem;  
+        background-color: #00000000;
+        @include tamaños (5rem, 3rem, 22rem,unset);
         font-size: 1rem;
         @include flexBox (flex,column,unset,stretch);
         transition: .5s;
         animation: izq_a_der .5s ease-in;
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        box-shadow: #0000002f 5px 5px 5px 5px;
         h1{
             color: #202c2d;
-            text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
-            letter-spacing: 5px;
-            margin: 0%;
-            padding: 0%;
+            text-shadow: #00E6F6 1px;
         }
     }
     p{
@@ -32,32 +33,27 @@
 }
 
 .botn {
-
-        border: none;
-        display: inline-block;
-        border-radius: 50px;
-        background-color: rgba(0, 0, 0, 0.822);
-        color: #ffffffc0;
-        text-align: center;
-        font-size: 1rem;
-        padding: 1rem;
-        width: 10rem;
-        transition: all 0.5s ease;
-        cursor: pointer;
-        margin: 1rem; margin-left: 0rem;
-        letter-spacing: 1px;
-        box-shadow: 0 5px #212529;
-        outline: none;
-        &:hover{
-            background-color: #ffffff5d;
-            color: rgb(0, 0, 0);
-            box-shadow: 0 3px #212529;
-            top: 1px;
-        }
-        &:active{
-            box-shadow: 0 0 #212529;
-            top: 5px;
-        }
+    @include tamaños (unset,0.5rem,7rem,unset);
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: #ffffffc0;
+    text-align: center;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 5px #212529;
+    outline: none;
+    &:hover{
+        background-color: #ffffff5d;
+        color: rgb(0, 0, 0);
+        box-shadow: 0 3px #212529;
+        top: 1px;
+    }
+    &:active{
+        box-shadow: 0 0 #212529;
+        top: 5px;
+    }
 }
 
 .contenedorBloques{
@@ -67,25 +63,13 @@
     margin: 10rem 0rem ;
 }
 
-.bloqueBeneficio {
-    color: rgba(255, 255, 255, 0.685) ;
-    padding: map-get($tarjeta, espaciado);
-    margin: map-get($tarjeta, margen);
-    font-weight: bold;
-    transition: all 0.3s ease;
-    background-size: map-get($tarjeta, backgroundtamaño);
-    letter-spacing: 0.2rem;
+.bloques{
+    @include tamaños (0rem,0rem 7rem,27rem,unset);
+    @include flexBox (flex,column,unset,center);
+    color:map-get($tarjeta , colorr);
+    transition: map-get($tarjeta , transicion);
     cursor:map-get($tarjeta, cursorr);
-    background: map-get($tarjeta, fondo);
-    backdrop-filter: map-get($tarjeta, filtro);
-    border-radius: map-get($tarjeta, radio);
-    border: map-get($tarjeta, borde);
-    width: map-get($tarjeta, ancho);
-    height: map-get($tarjeta, alto);
-    @include flexBox (flex,column,center,center);
-    text-align: center;
-    animation: blur 1s;
-    transition: 1s;
+    text-align: map-get($tarjeta , textalign);
     h2{
         color: #000000;
         text-shadow: $textshadow;
@@ -97,13 +81,16 @@
     p{
         margin: 0rem;
     }
-    &:hover{
-        box-shadow: rgba(0, 0, 0, 0.266) 5px 5px 10px 5px;
-        transform: scale(1.1);
-        background: linear-gradient(to bottom right, #05090c44, #16344b98);
+    img{
+        padding: 3rem
     }
 }
 
+.bloques1{
+    @extend .bloques;
+    border-left: solid 2px rgba(0, 0, 0, 0.493);
+    border-right: solid 2px rgba(0, 0, 0, 0.493);
+}
 
 .sale {
     @include grilla (grid,550px 550px,auto 500px auto,0px,0px);
@@ -124,7 +111,7 @@
     margin: 0.5rem 2rem;
     padding: 0rem;
     border-bottom: solid #05090c;
-    h1{
+    h2{
         font-family: 'Righteous', cursive;
         letter-spacing: 0.1rem;
         font-size: 4.6rem;
@@ -141,6 +128,7 @@
     background-image: url(../Multimedia/grid.jpg);
     margin: 0rem 2rem;
     animation: para_arriba 1s;
+
 }
 
 .foto-2{
@@ -158,8 +146,6 @@
     padding: 1rem 1rem;
     border-top: solid #05090c;
     margin: 0.5rem 2rem ;
-    letter-spacing: 0.1rem;
-    font-family: 'Righteous', cursive;
     letter-spacing: 0.1rem;
     animation: para_abajo 1s;
 }

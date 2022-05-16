@@ -12,3 +12,10 @@
     grid-column-gap: $c_gap;
     grid-row-gap: $r_gap;
 }
+
+@mixin tamaños ($margen,$pading,$w,$h,) {
+    margin: $margen;
+    padding: $pading;
+    width: $w;
+    height: $h;
+}

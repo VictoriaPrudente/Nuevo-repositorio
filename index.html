@@ -30,43 +30,32 @@
 </head>
 
 <body class="cuerpo">
-    <header id="h_index">
-        <div class="logo">
-            <a href="./Index.html"><img class="icono" src="./Multimedia/logo.png" alt="TfeP" width="50" height="50"></a>
-            <p class="nombreProyecto">THE FINAL EYEWEAR PROJECT</p>
+    <header id="h_index"> 
+        <div class="contenedorMenu"> 
+            <div class="logo">
+                <a href="./Index.html"><img class="icono" src="./Multimedia/logo.png" alt="TfeP" width="50" height="50"></a>
+                <p class="nombreProyecto">THE FINAL EYEWEAR PROJECT</p>
+            </div>
+            <nav class="headerMenu not">
+                <input type="checkbox" name="" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="listaNav">
+                    <li><a class="glitch_menu" href="./Index.html" id="inicio">Inicio</a></li>  
+                    <li><a class="glitch_menu" href="./View/Tienda.html">Tienda </a>
+                        <ul class="dropdownn">
+                            <li><a href="./View/Tienda.html" class="submenu">Modelos</a></li>
+                            <li><a href="./View/Tienda.html" class="submenu">Tendencias</a></li>
+                            <li><a href="./View/Tienda.html" class="submenu">Novedades</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="glitch_menu" href="./View/Proyecto.html">Proyecto</a></li>
+                    <Li><a class="glitch_menu" href="./View/Sucursales.html">Sucursales</a></Li>
+                    <Li><a class="glitch_menu" href="./View/Contacto.html">Contacto</a></Li>
+                </ul>
+            </nav>
         </div>
-        
-        <nav class="headerMenu not">
-
-            <!--hamburguesa
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>-->
-
-            <ul class="listaNav">
-                <li>    
-                    <a class="glitch_menu" href="./Index.html" id="inicio">Inicio</a>
-                </li>  
-                <li>
-                    <a class="glitch_menu" href="./View/Tienda.html">Tienda ▼</a>
-                    <ul class="dropdownn">
-                        <li><a href="./View/Tienda.html" class="submenu">Modelos</a></li>
-                        <li><a href="./View/Tienda.html" class="submenu">Tendencias</a></li>
-                        <li><a href="./View/Tienda.html" class="submenu">Novedades</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="glitch_menu" href="./View/Proyecto.html">Proyecto</a>
-                </li>
-                <Li>
-                    <a class="glitch_menu" href="./View/Sucursales.html">Sucursales</a>
-                </Li>
-                <Li>
-                    <a class="glitch_menu" href="./View/Contacto.html">Contacto</a>
-                </Li>
-            </ul>
-        </nav>
-
         <section id="hombre" >
             <div>
                 <h1>Lentes de sol</h1>
@@ -77,19 +66,13 @@
         </section>
     </header>
 
-    <main class="contenido_main">
+    <main>
         <!--tarjetas de beneficios-->
-        <section class="contenedorBloques">
-            <div class="bloqueBeneficio">
-                <!--logo de un corazón-->
-                <img src="  " alt="">
-                <h2 class="beneficio__titulo">Cuidamos tu salud.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
+        
 
-            <div class="bloqueBeneficio">
-                <!--logo de una tarjeta-->
-                <img src="  " alt="">
+        <section class="contenedorBloques">
+            <div class="bloques">
+                <img src="./Multimedia/shipping.svg" alt="">
                 <h2 class="beneficio__titulo">Medios de pago.</h2>
                 <ul>
                     <li>Paypal</li>
@@ -99,16 +82,14 @@
                 </ul>
             </div>
 
-            <div class="bloqueBeneficio">
-                <!--logo de una camión-->
-                <img src="  " alt="">
+            <div class="bloques1">
+                <img src="./Multimedia/payment.svg" alt="">
                 <h2 class="beneficio__titulo">Envíos a todo el país.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
 
-            <div class="bloqueBeneficio">
-                <!--logo de seguridad-->
-                <img src="  " alt="">
+            <div class="bloques">
+                <img src="./Multimedia/protected.svg" alt="">
                 <h2 class="beneficio__titulo">Protegemos tu compra.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
