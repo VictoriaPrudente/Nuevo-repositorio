@@ -4,8 +4,8 @@
 @import "./mixin";
 
 #tienda{
-    color: #5baca1;
-    font-size: 1.4rem;
+    color: map-get($pagActual, colorPag);
+    font-size: map-get($pagActual , fontsize );
 }
 
 #h_todos{
@@ -27,15 +27,20 @@
     grid-template-areas: 
     "modelos galeria"
     "filtro galeria";
-    height: 150rem;
+    height: 158rem;
 }
 
 .modelosSect{
     background-size: cover;
     align-items: center;
-    font-size: 1rem;
     width: 0 auto;
     grid-area: modelos;
+    h1{
+        font-size: 1.2rem;
+    }
+    h2{
+        font-size: .8rem;
+    }
 }
 
 .textModelo{
@@ -48,7 +53,7 @@
 .filtro{
     background-color: #ffffff;
     margin: 0%;
-    height: auto;
+    height: 103.1%;
     width: 16.6rem;
     padding: 1rem ;
     border-right: solid 0.1rem #0000004d;
@@ -91,17 +96,62 @@ label{
     margin-left: 2%;
     background-color: #ffffff;
     padding-bottom: 4rem; 
-    img{
-        padding: 0.5rem;
-        margin: 1rem;
-        background-color: #ffffff;
-        &:hover{
-            transform: scale(1.1);
-            box-shadow: #0000005e 5px 5px 5px 5px;
-        }
-    }
 }
 
 #galeriaTienda1{
     padding-top: 4rem;
 }
+
+.foto{
+    @include flexBox (flex,column,start,start);
+    margin: 1rem;
+    background-color: #e2e2e285;
+    border-radius: 2%;
+    border:rgba(0, 0, 0, 0.041) solid 1px;
+    font-family: 'Roboto', sans-serif;
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: #0000000e 5px 5px 5px 5px;
+    }
+    img{
+        &:hover{
+            cursor:pointer;
+        }
+    }
+    .title{
+        padding: 8%;
+        text-align: start;
+        font-size: 0.9rem
+    }
+    section{
+        padding: 8%;
+        padding-top: 0%;
+        width: 100%;
+        .oferta{
+            font-size: 0.8rem;
+            text-decoration: line-through;
+            color: rgba(0, 0, 0, 0.466);
+        }
+    }
+}
+
+.precio{
+    @include flexBox (flex,row,unset,center);
+    span{
+        font-size: 1.3rem;
+    }
+    div{
+        display: flex;
+        margin-left: 3rem;
+        i{
+            padding: 0% 20%;
+            &:hover{
+                cursor:pointer;
+                color: #78b9b1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+

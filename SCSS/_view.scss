@@ -26,6 +26,7 @@ iframe{
     h2{
         @extend .h1;
         padding: 3rem;
+        padding-top: 2%;
     }
 }
 
@@ -35,25 +36,61 @@ iframe{
 }
 
 .bloqueEquipo{
-    background-color: rgba(255, 255, 255, 0.384);
-    padding: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.781);
     backdrop-filter: blur(30px);
     margin: 1rem;
     border-radius: 1.5rem;
-    box-shadow: #05090ca1 1px 5px 10px 2px;
+    box-shadow: #05090c80 1px 5px 10px 2px;
     @include flexBox(flex,column,unset,center);
     img{
         margin: 1.2rem;
         border-radius: 100%;
-        border: solid #102227b2 1px ;
+        border: solid #6d9fadf1 2px ;
     }
     p{
         text-align: center;
         margin: 2rem;
+        font-size: .8rem;
+        color: rgba(255, 255, 255, 0.801) !important;
     }
     h3{
-        width: 10rem;
+        font-size: 1.3rem;
         text-align: center;
+        margin: 0;
+        padding: 0;
+        color: #6d9fadf1;
+    }
+    .wrapper-eq{
+        display: inline-flex;
+        .icono{
+            margin: 0 0px;
+            text-align: center;
+            cursor: pointer;
+            @include flexBox(flex,column,center,center);
+            position: relative;
+            z-index: 2;
+            transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            span{
+                display: block;
+                width: 40px;
+                background: rgba(255, 255, 255, 0);
+                border-radius: 50%;
+                position: relative;
+                z-index: 2;
+                box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+                transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                i{
+                    line-height: 60px;
+                    font-size: 15px;
+                }
+            }
+            &:hover{
+                span, a{
+                    color: #fff;
+                    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+                }
+            }
+        }
     }
 }
 
@@ -113,7 +150,7 @@ iframe{
     text-align: center;
     margin-top: 0%;
     color: aliceblue;
-    width: 30rem;
+    width: 40rem;
     padding: 5rem;
 }
 
@@ -124,7 +161,7 @@ label{
 }
 
 .sexo{
-padding: 1%;
+    padding: 1%;
 }
 
 select{
@@ -135,7 +172,7 @@ select{
 .input{
     padding: 2%; padding-bottom: 1%;
     border: solid rgba(4, 57, 65, 0.911);
-    box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.192);
+    box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.027);
     text-align: center;
 }
 
@@ -146,7 +183,7 @@ select{
 textarea{
     padding: 2%; padding-bottom: 1%;
     border: solid rgba(4, 57, 65, 0.911);
-    box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.192);
+    box-shadow: 2px 2px 2px 2px rgba(224, 218, 134, 0.068);
     text-align: center;
 }
 
@@ -171,4 +208,7 @@ textarea{
 .imgContacto{
     padding-right: 5rem ;
     align-self: center;
+    img{
+        border-radius: 1%;
+    }
 }

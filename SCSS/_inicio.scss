@@ -10,24 +10,26 @@
 
 #hombre {
     @include flexBox (flex,row,unset,flex-end);
-    height: 80%;
+    height: 90%;
     div{
-        background-color: #00000000;
-        @include tamaños (5rem, 3rem, 22rem,unset);
+        background: rgba( 16, 60, 43, 0.45 );
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.205);
+        backdrop-filter: blur( 13px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        @include tamaños (5rem, 2rem, 22rem,unset);
         font-size: 1rem;
         @include flexBox (flex,column,unset,stretch);
         transition: .5s;
         animation: izq_a_der .5s ease-in;
-        backdrop-filter: blur(10px);
-        border-radius: 50px;
-        box-shadow: #0000002f 5px 5px 5px 5px;
         h1{
-            color: #202c2d;
+            color: #dff8f58c;
             text-shadow: #00E6F6 1px;
         }
     }
     p{
         margin: 1rem 0rem;
+        color: #dff8f58c;
     }
     
 }
@@ -36,7 +38,7 @@
     @include tamaños (unset,0.5rem,7rem,unset);
     border: none;
     border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgb(0, 0, 0);
     color: #ffffffc0;
     text-align: center;
     font-size: 0.8rem;
@@ -58,9 +60,10 @@
 
 .contenedorBloques{
     @include flexBox (flex,row,space-around,unset);
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: all 500ms;
-    margin: 10rem 0rem ;
+    margin: 1rem 5rem ;
+    animation: blur 1s
 }
 
 .bloques{
@@ -71,6 +74,7 @@
     cursor:map-get($tarjeta, cursorr);
     text-align: map-get($tarjeta , textalign);
     h2{
+        font-size: 1.1rem;
         color: #000000;
         text-shadow: $textshadow;
     }
@@ -82,14 +86,14 @@
         margin: 0rem;
     }
     img{
-        padding: 3rem
+        padding: 1.5rem
     }
 }
 
 .bloques1{
     @extend .bloques;
-    border-left: solid 2px rgba(0, 0, 0, 0.493);
-    border-right: solid 2px rgba(0, 0, 0, 0.493);
+    border-left: solid 2px rgba(0, 0, 0, 0.295);
+    border-right: solid 2px rgba(0, 0, 0, 0.295);
 }
 
 .sale {
@@ -99,15 +103,12 @@
     "foto fotos"
     "foto btn";
     padding: 3rem;
-    margin-top: 10rem ;
+    margin: 3rem;
     justify-content: center;
-    background: linear-gradient( #1a777a8a 5%, #102227 100% )
+    background: linear-gradient( #1a777a8a 5%, #102227 100% );
 }
 
 .texto{
-    grid-row: 1;
-    grid-column: 1;
-    grid-area: text;
     margin: 0.5rem 2rem;
     padding: 0rem;
     border-bottom: solid #05090c;
@@ -128,7 +129,7 @@
     background-image: url(../Multimedia/grid.jpg);
     margin: 0rem 2rem;
     animation: para_arriba 1s;
-
+    border-radius: 1%;
 }
 
 .foto-2{
@@ -137,6 +138,7 @@
     margin: 0rem 2rem;
     background-size: cover;
     animation: para_abajo 1s;
+    border-radius: 1%;
 }
 
 .boton{
@@ -198,22 +200,22 @@
 #text {
     color: rgba(15, 14, 14, 0.781);
     text-align: center;
-    padding: 5rem 5rem 5rem 5rem; 
-    margin: 5rem 0rem;
-    background-size: cover;
+    padding: 2rem; 
+    margin: 3rem 1rem;
     h2{
-        font-size: 4.5rem;
+        font-size: 3rem;
         overflow: hidden; 
         border-right: .15em solid rgb(23, 148, 197); 
         white-space: nowrap;
         margin: 0 auto; 
-        letter-spacing: .15em; 
+        letter-spacing: .10em; 
         animation: 
         typing 3.5s steps(40, end),
         barrita .75s step-end infinite;
+        width: 48rem;
         }
     p{
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 2.2rem;
         font-weight: 200;
         position: relative;
@@ -221,31 +223,29 @@
     }
 }
 
-    .conoceProyecto{
-        background: linear-gradient( rgb(0, 0, 0) 50%, rgb(204, 208, 209) 50%);
-        background-size: cover;
-        @include flexBox (flex,row,space-evenly,center);
-        padding: 0% 0%;
-        margin-top: 3rem;
-        animation: der_izq 1s;
+.conoceProyecto{
+    background: linear-gradient( rgb(0, 0, 0) 40%, rgb(204, 208, 209) 41%);
+    @include flexBox (flex,row,space-evenly,center);
+    padding: 0% 0%;
+    margin-top: 8rem;
+    animation: der_izq 1s;
+    img{
+        border-radius: 100%;
     }
-    .contenedorProyecto{
-        color: rgb(255, 255, 255);
-        text-align: justify;
-        font-size: 2rem;
-        padding: 5rem;
-        h4{
-            color: #1e5357;
-            letter-spacing: 0.4rem;
-        }
+}
+.contenedorProyecto{
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    font-size: 2rem;
+    padding: 3rem;
+    h4{
+        color: #1e5357;
+        letter-spacing: 0.4rem;
     }
+}
 
 
-    .btn_proyecto{
-        @extend .botn;
-    }
-    
-
-    
-
+.btn_proyecto{
+    @extend .botn;
+}
 
