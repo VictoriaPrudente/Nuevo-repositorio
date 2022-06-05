@@ -126,20 +126,51 @@
 
 .foto-1{
     grid-area: foto;
-    background-image: url(../Multimedia/grid.jpg);
     margin: 0rem 2rem;
+    background-size: cover;
     animation: para_arriba 1s;
     border-radius: 1%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px #0000001f;
+    transition: .5s;
+    img{
+        width: 100%;
+        transform: scale(1);
+        transition: .3s ease-in-out;
+    }
+    &:hover{ 
+        box-shadow: 5px 5px 5px 5px #0000003b;
+        img{
+            transform: scale(1.2);  
+        }
+    }
 }
+
 
 .foto-2{
     grid-area: fotos;
-    background-image: url(../Multimedia/grid2.jpg);
     margin: 0rem 2rem;
     background-size: cover;
     animation: para_abajo 1s;
     border-radius: 1%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px #0000001f;
+    transition: .5s;
+    img{
+        width: 100%;
+        transform: scale(1);
+        transition: .3s ease-in-out;
+    }
+    &:hover{ 
+        box-shadow: 5px 5px 5px 5px #0000003b;
+        img{
+            transform: scale(1.2);  
+        }
+    }
 }
+
 
 .boton{
     grid-area: btn;
@@ -225,12 +256,18 @@
 
 .conoceProyecto{
     background: linear-gradient( rgb(0, 0, 0) 40%, rgb(204, 208, 209) 41%);
-    @include flexBox (flex,row,space-evenly,center);
+    @include flexBox (flex,row,space-between,center);
     padding: 0% 0%;
     margin-top: 8rem;
     animation: der_izq 1s;
     img{
         border-radius: 100%;
+        margin-left: 15rem;
+        transition: 1s;
+        box-shadow: #0000001c 5px 5px 5px 5px;
+        &:hover{
+            transform: rotateX(360deg) ;
+        }
     }
 }
 .contenedorProyecto{

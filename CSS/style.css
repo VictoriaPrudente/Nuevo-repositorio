@@ -402,6 +402,76 @@
   }
 }
 
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
 @keyframes tarjeta {
   0% {
     -webkit-transform-origin: 0 0;
@@ -598,6 +668,41 @@
             transform: scale(2, 2);
     -webkit-filter: blur(20px);
             filter: blur(20px);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
   }
 }
 
@@ -1038,6 +1143,41 @@ footer {
   }
 }
 
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
 #inicio {
   color: #5baca1;
   font-size: 1.4rem;
@@ -1246,11 +1386,35 @@ footer {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: foto;
-  background-image: url(../Multimedia/grid.jpg);
   margin: 0rem 2rem;
+  background-size: cover;
   -webkit-animation: para_arriba 1s;
           animation: para_arriba 1s;
   border-radius: 1%;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px 5px #0000001f;
+          box-shadow: 5px 5px 5px 5px #0000001f;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.foto-1 img {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.foto-1:hover {
+  -webkit-box-shadow: 5px 5px 5px 5px #0000003b;
+          box-shadow: 5px 5px 5px 5px #0000003b;
+}
+
+.foto-1:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .foto-2 {
@@ -1258,12 +1422,35 @@ footer {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: fotos;
-  background-image: url(../Multimedia/grid2.jpg);
   margin: 0rem 2rem;
   background-size: cover;
   -webkit-animation: para_abajo 1s;
           animation: para_abajo 1s;
   border-radius: 1%;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 5px 5px #0000001f;
+          box-shadow: 5px 5px 5px 5px #0000001f;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.foto-2 img {
+  width: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.foto-2:hover {
+  -webkit-box-shadow: 5px 5px 5px 5px #0000003b;
+          box-shadow: 5px 5px 5px 5px #0000003b;
+}
+
+.foto-2:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .boton {
@@ -1368,9 +1555,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1382,6 +1569,16 @@ footer {
 
 .conoceProyecto img {
   border-radius: 100%;
+  margin-left: 15rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: #0000001c 5px 5px 5px 5px;
+          box-shadow: #0000001c 5px 5px 5px 5px;
+}
+
+.conoceProyecto img:hover {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
 }
 
 .contenedorProyecto {
@@ -1592,6 +1789,41 @@ footer {
             transform: scale(2, 2);
     -webkit-filter: blur(20px);
             filter: blur(20px);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
   }
 }
 
@@ -2025,6 +2257,41 @@ footer {
   }
 }
 
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
 #tienda {
   color: #5baca1;
   font-size: 1.2rem;
@@ -2451,6 +2718,41 @@ label {
   }
 }
 
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circulo {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
 /*Proyecto*/
 #proyecto {
   color: #5baca1;
@@ -2533,6 +2835,13 @@ iframe {
   margin: 1.2rem;
   border-radius: 100%;
   border: solid #6d9fadf1 2px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.bloqueEquipo img:hover {
+  -webkit-animation: rotate 1.5s linear infinite;
+          animation: rotate 1.5s linear infinite;
 }
 
 .bloqueEquipo p {
